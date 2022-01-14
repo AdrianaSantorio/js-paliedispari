@@ -20,19 +20,28 @@ Creare una funzione per capire se la parola inserita è palindroma
 
 const button = document.getElementById('palindrome-check');
 const resultElement = document.getElementById('result');
+const comparisonElement = document.getElementById('comparison');
+let sign = '';
 
 //1.3
 
 button.addEventListener('click', function() {
-    const userWord = document.getElementById('word').value;
+    const userWord = (document.getElementById('word').value).toLowerCase();
+    
     console.log(userWord);
     console.log(reverseWord(userWord));
     console.log(isPalindrome(userWord));
     if (isPalindrome(userWord)) {
         resultElement.innerText = 'La tua parola è palindroma!';
+        sign = '='
+        comparisonElement.style.color = 'green';
     } else {
-        resultElement.innerText = 'La tua parola non è palindroma!'
+        resultElement.innerText = 'La tua parola non è palindroma!';
+        sign = '&ne;';
+        comparisonElement.style.color = 'red';
     }
+    comparisonElement.innerHTML = `${userWord} ${sign} ${reverseWord(userWord)}`;
+
 })
 
 
