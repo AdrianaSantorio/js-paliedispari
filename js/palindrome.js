@@ -1,4 +1,5 @@
-/*Palidroma
+/*
+Palindroma
 Chiedere all’utente di inserire una parola
 Creare una funzione per capire se la parola inserita è palindroma
 */
@@ -18,6 +19,7 @@ Creare una funzione per capire se la parola inserita è palindroma
 //1.2 individuare l' elemento della pagina che svolge l' azione
 
 const button = document.getElementById('palindrome-check');
+const resultElement = document.getElementById('result');
 
 //1.3
 
@@ -25,8 +27,12 @@ button.addEventListener('click', function() {
     const userWord = document.getElementById('word').value;
     console.log(userWord);
     console.log(reverseWord(userWord));
-    console.log(isPalindrome(word));
-
+    console.log(isPalindrome(userWord));
+    if (isPalindrome(userWord)) {
+        resultElement.innerText = 'La tua parola è palindroma!';
+    } else {
+        resultElement.innerText = 'La tua parola non è palindroma!'
+    }
 })
 
 
