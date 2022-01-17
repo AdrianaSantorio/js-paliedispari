@@ -49,11 +49,11 @@ button.addEventListener('click', function() {
 
 //funzione reverseWord
 function reverseWord (word) {
-    let reverseWord = '';
+    let reversedWord = '';
     for (let i = word.length - 1; i >= 0; i--) {
-        reverseWord += word.charAt(i);
+        reversedWord += word.charAt(i);
     }
-    return reverseWord;
+    return reversedWord;
 }
 
 //funzione is palindrome
