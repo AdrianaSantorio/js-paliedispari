@@ -17,7 +17,7 @@ buttonElement.addEventListener('click',function(){
 
     //todo: aggiungere validazione
     
-    const cpuNumber = generateRnd(1, 5);
+    const cpuNumber = getRnd(1, 5);
     console.log('cpu number', cpuNumber);
     const sum = cpuNumber + userNumber;
     console.log('somma', sum);
@@ -37,7 +37,7 @@ buttonElement.addEventListener('click',function(){
 })
 
 //FUNZIONI
-function generateRnd(min, max) {
+function getRnd(min, max) {
    return Math.floor(Math.random() * (max - min + 1)) + min;
 
 }
@@ -45,3 +45,6 @@ function generateRnd(min, max) {
 function evenOrOdd(number) {
     return (number % 2); 
 }
+
+
+//best practice: le funzioni vanno scritte sopra

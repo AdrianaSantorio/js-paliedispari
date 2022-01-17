@@ -26,7 +26,7 @@ let sign = '';
 //1.3
 
 button.addEventListener('click', function() {
-    const userWord = (document.getElementById('word').value).toLowerCase();
+    const userWord = (document.getElementById('word').value).toLowerCase().trim();
     
     console.log(userWord);
     console.log(reverseWord(userWord));
@@ -61,7 +61,6 @@ function isPalindrome (word) {
     if (word === reverseWord(word)) {
         return true;
     }
-    else {
-        return false;
-    }
+    //*non  c' era bisogno di else
+    return false;
 }
